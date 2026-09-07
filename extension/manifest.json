@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "영상 배속 조절",
+  "version": "1.0.0",
+  "description": "영상 재생 속도를 선택하고 기억합니다.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage"],
+  "action": {"default_title": "영상 배속 조절", "default_popup": "popup.html"},
+  "content_scripts": [
+    {
+      "matches": ["https://study.hunet.co.kr/*"],
+      "js": ["engine.js"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://study.hunet.co.kr/*"],
+      "js": ["settings.js", "bridge.js"],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    }
+  ]
+}
