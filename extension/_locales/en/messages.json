@@ -1,0 +1,100 @@
+{
+  "appName": {
+    "message": "SpeedKeep: Video Speed per Site"
+  },
+  "appShort": {
+    "message": "SpeedKeep"
+  },
+  "appDescription": {
+    "message": "Set video playback speed on the sites you choose. Remembers each site, with presets and keyboard shortcuts."
+  },
+  "enableSite": {
+    "message": "Speed up videos on this site"
+  },
+  "slower": {
+    "message": "Slower"
+  },
+  "faster": {
+    "message": "Faster"
+  },
+  "presetsGroup": {
+    "message": "Presets"
+  },
+  "custom": {
+    "message": "Custom speed"
+  },
+  "apply": {
+    "message": "Apply"
+  },
+  "autoStart": {
+    "message": "Start automatically when I open this site"
+  },
+  "autoStartHint": {
+    "message": "Chrome will ask to allow access to this site only."
+  },
+  "settings": {
+    "message": "Presets and shortcuts"
+  },
+  "presetsLabel": {
+    "message": "Preset speeds (up to 6, comma separated)"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "changeShortcuts": {
+    "message": "Change shortcuts"
+  },
+  "shortcutNotSet": {
+    "message": "Not set"
+  },
+  "unsupported": {
+    "message": "Chrome does not allow extensions on this page. Open a page with a video."
+  },
+  "videosFound": {
+    "message": "Videos on this page: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noVideo": {
+    "message": "No video found yet. Start playing one and open this again."
+  },
+  "invalidRate": {
+    "message": "Enter a speed from 0.25 to 16."
+  },
+  "invalidPresets": {
+    "message": "Enter 1 to 6 speeds from 0.25 to 16."
+  },
+  "presetsSaved": {
+    "message": "Presets saved."
+  },
+  "saveFailed": {
+    "message": "Could not save. Close and reopen this window."
+  },
+  "permissionDenied": {
+    "message": "Access was not allowed. Speed still applies when you open this window."
+  },
+  "toastOff": {
+    "message": "Speed off"
+  },
+  "cmdFaster": {
+    "message": "Speed up (current site)"
+  },
+  "cmdSlower": {
+    "message": "Slow down (current site)"
+  },
+  "cmdToggle": {
+    "message": "Turn speed on or off (current site)"
+  },
+  "shortcutFaster": {
+    "message": "Faster"
+  },
+  "shortcutSlower": {
+    "message": "Slower"
+  },
+  "shortcutToggle": {
+    "message": "On/off"
+  }
+}

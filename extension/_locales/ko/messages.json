@@ -1,0 +1,100 @@
+{
+  "appName": {
+    "message": "SpeedKeep: 사이트별 영상 배속"
+  },
+  "appShort": {
+    "message": "SpeedKeep"
+  },
+  "appDescription": {
+    "message": "고른 사이트에서만 영상 재생 속도를 바꿉니다. 사이트마다 배속을 기억하고 프리셋과 단축키를 지원합니다."
+  },
+  "enableSite": {
+    "message": "이 사이트 영상 배속 켜기"
+  },
+  "slower": {
+    "message": "느리게"
+  },
+  "faster": {
+    "message": "빠르게"
+  },
+  "presetsGroup": {
+    "message": "프리셋"
+  },
+  "custom": {
+    "message": "직접 입력"
+  },
+  "apply": {
+    "message": "적용"
+  },
+  "autoStart": {
+    "message": "이 사이트를 열면 자동으로 적용"
+  },
+  "autoStartHint": {
+    "message": "Chrome이 이 사이트에 대한 접근 허용만 묻습니다."
+  },
+  "settings": {
+    "message": "프리셋과 단축키"
+  },
+  "presetsLabel": {
+    "message": "프리셋 배속 (최대 6개, 쉼표로 구분)"
+  },
+  "save": {
+    "message": "저장"
+  },
+  "changeShortcuts": {
+    "message": "단축키 바꾸기"
+  },
+  "shortcutNotSet": {
+    "message": "지정 안 됨"
+  },
+  "unsupported": {
+    "message": "Chrome이 이 페이지에서는 확장 사용을 막습니다. 영상이 있는 페이지에서 열어 주세요."
+  },
+  "videosFound": {
+    "message": "이 페이지의 영상: $COUNT$개",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noVideo": {
+    "message": "아직 영상을 찾지 못했습니다. 영상을 재생한 뒤 다시 열어 주세요."
+  },
+  "invalidRate": {
+    "message": "0.25에서 16 사이로 입력해 주세요."
+  },
+  "invalidPresets": {
+    "message": "0.25에서 16 사이 배속을 1~6개 입력해 주세요."
+  },
+  "presetsSaved": {
+    "message": "프리셋을 저장했습니다."
+  },
+  "saveFailed": {
+    "message": "저장하지 못했습니다. 창을 닫고 다시 열어 주세요."
+  },
+  "permissionDenied": {
+    "message": "접근을 허용하지 않았습니다. 이 창을 열 때는 계속 적용됩니다."
+  },
+  "toastOff": {
+    "message": "배속 꺼짐"
+  },
+  "cmdFaster": {
+    "message": "빠르게 (현재 사이트)"
+  },
+  "cmdSlower": {
+    "message": "느리게 (현재 사이트)"
+  },
+  "cmdToggle": {
+    "message": "배속 켜기/끄기 (현재 사이트)"
+  },
+  "shortcutFaster": {
+    "message": "빠르게"
+  },
+  "shortcutSlower": {
+    "message": "느리게"
+  },
+  "shortcutToggle": {
+    "message": "켜기/끄기"
+  }
+}

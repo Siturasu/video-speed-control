@@ -1,2 +1,42 @@
-:root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#1a1c20;background:#fff}
-*{box-sizing:border-box}body{width:320px;margin:0}main{padding:24px}.eyebrow{margin:0 0 12px;font-size:11px;letter-spacing:.08em;color:#555d6d}h1{font-size:22px;line-height:1.35;margin:0 0 8px;font-weight:700}.intro,.note{font-size:13px;line-height:1.65;color:#555d6d}.intro{margin:0 0 24px}.toggle,.speed{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;font-size:14px;font-weight:700}.toggle{border-bottom:1px solid #dcdee3;margin-bottom:12px;padding-bottom:12px}input{width:20px;height:20px;accent-color:#1a1c20}select{height:40px;min-width:120px;border:1px solid #dcdee3;border-radius:10px;padding:0 12px;background:#fff;color:#1a1c20;font:inherit}select:disabled{color:#868b94;background:#f3f4f5}:focus-visible{outline:2px solid #5e98fe;outline-offset:2px}#status{min-height:20px;font-size:12px;color:#075445}#status.error{color:#921708}.note{font-size:12px;margin:16px 0 0;padding-top:16px;border-top:1px solid #dcdee3}
+:root{color-scheme:light dark;--ink:#16181d;--muted:#5b6270;--line:#dde0e6;--bg:#fff;--soft:#f3f4f6;--accent:#1f5eff;--accent-ink:#fff;--ok:#0b6b4f;--err:#a1200e;
+  font:14px/1.5 system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);background:var(--bg)}
+@media (prefers-color-scheme:dark){:root{--ink:#eceef2;--muted:#a3a9b5;--line:#343843;--bg:#1b1d22;--soft:#262930;--accent:#6f9bff;--accent-ink:#0d1220;--ok:#6fd3ae;--err:#ff8f7d}}
+*{box-sizing:border-box}
+body{width:320px;margin:0;background:var(--bg)}
+main{padding:16px}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px}
+h1{font-size:16px;margin:0}
+.host{margin:0;color:var(--muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%}
+.notice{margin:0 0 12px;padding:12px;border-radius:10px;background:var(--soft);color:var(--muted)}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;font-weight:600}
+input[type=checkbox]{width:18px;height:18px;margin:0;accent-color:var(--accent);flex:none}
+.dial{display:flex;align-items:center;justify-content:center;gap:16px;margin:8px 0 12px}
+.dial output{min-width:96px;text-align:center;font-size:34px;font-weight:700;font-variant-numeric:tabular-nums}
+.dial output.off{color:var(--muted)}
+button{font:inherit;color:inherit;cursor:pointer;border:1px solid var(--line);background:var(--bg);border-radius:10px;min-height:36px;padding:0 12px}
+button:hover{background:var(--soft)}
+.round{width:40px;height:40px;padding:0;border-radius:50%;font-size:20px;line-height:1}
+.presets{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.presets button{font-weight:600;font-variant-numeric:tabular-nums}
+.presets button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.inline{display:flex;align-items:center;gap:8px}
+.inline label{flex:1;color:var(--muted);font-size:13px}
+input[type=number],input[type=text]{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:10px;height:36px;padding:0 10px;min-width:0}
+#customForm input{width:80px}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13px}
+.check input{margin-top:2px}
+.check small{display:block;color:var(--muted);font-size:12px}
+.status{min-height:20px;margin:12px 0 0;font-size:12px;color:var(--ok)}
+.status.error{color:var(--err)}
+details{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;font-size:13px;min-height:28px}
+.stack{display:grid;gap:6px;margin-top:8px}
+.stack label{font-size:12px;color:var(--muted)}
+.stack .inline input{flex:1}
+.shortcuts{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:12px 0 8px;font-size:12px}
+.shortcuts dt{color:var(--muted)}
+.shortcuts dd{margin:0;font-family:ui-monospace,Menlo,monospace}
+.link{border:0;padding:0;min-height:28px;background:none;color:var(--accent);text-decoration:underline}
+.link:hover{background:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+[hidden]{display:none!important}

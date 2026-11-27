@@ -1,7 +1,31 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>영상 배속 조절</title><link rel="stylesheet" href="popup.css"></head>
-<body><main><p class="eyebrow">VIDEO SPEED CONTROL</p><h1>편한 속도로 들으세요</h1><p class="intro">선택한 배속을 다음 강의에도 적용합니다.</p>
-<label class="toggle"><span>배속 유지</span><input id="enabled" type="checkbox" role="switch"></label>
-<label class="speed" for="rate">재생 속도<select id="rate"></select></label>
-<p id="status" role="status" aria-live="polite"></p><p class="note">설치 후 열려 있는 강의 창을 새로고침해 주세요. 고배속에서는 영상 안의 실측 표시를 확인해 주세요.</p>
-</main><script src="settings.js"></script><script src="popup.js"></script></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SpeedKeep</title><link rel="stylesheet" href="popup.css"></head>
+<body><main>
+<header><h1 data-i18n="appShort"></h1><p id="host" class="host"></p></header>
+<p id="unsupported" class="notice" data-i18n="unsupported" hidden></p>
+<section id="controls" hidden>
+  <label class="toggle"><span data-i18n="enableSite"></span><input id="enabled" type="checkbox" role="switch"></label>
+  <div class="dial">
+    <button id="slower" type="button" class="round" data-i18n-label="slower">−</button>
+    <output id="rate" aria-live="polite">1×</output>
+    <button id="faster" type="button" class="round" data-i18n-label="faster">+</button>
+  </div>
+  <div id="presets" class="presets" role="group" data-i18n-label="presetsGroup"></div>
+  <form id="customForm" class="inline" novalidate>
+    <label for="custom" data-i18n="custom"></label>
+    <input id="custom" type="number" min="0.25" max="16" step="0.05" inputmode="decimal">
+    <button type="submit" data-i18n="apply"></button>
+  </form>
+  <label class="check"><input id="auto" type="checkbox"><span><span data-i18n="autoStart"></span><small data-i18n="autoStartHint"></small></span></label>
+</section>
+<p id="status" class="status" role="status"></p>
+<details>
+  <summary data-i18n="settings"></summary>
+  <form id="presetForm" class="stack" novalidate>
+    <label for="presetInput" data-i18n="presetsLabel"></label>
+    <div class="inline"><input id="presetInput" type="text" inputmode="decimal" autocomplete="off"><button type="submit" data-i18n="save"></button></div>
+  </form>
+  <dl id="shortcuts" class="shortcuts"></dl>
+  <button id="openShortcuts" type="button" class="link" data-i18n="changeShortcuts"></button>
+</details>
+</main><script src="lib/core.js"></script><script src="popup.js"></script></body></html>

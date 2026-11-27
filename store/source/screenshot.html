@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Store screenshot template. Render at 1280x800 with ?n=1..5&lang=en|ko (rendered by render.mjs). -->
+<html><head><meta charset="utf-8"><title>screenshot</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;word-break:keep-all;width:1280px;height:800px;overflow:hidden;background:#eef1f7;font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#16181d}
+  .head{position:absolute;left:64px;top:56px;width:560px}
+  h1{font-size:46px;line-height:1.2;margin:0 0 16px;letter-spacing:-.01em}
+  .head p{font-size:21px;line-height:1.55;color:#4b5261;margin:0}
+  .browser{position:absolute;left:64px;top:300px;width:760px;height:440px;background:#fff;border-radius:14px;box-shadow:0 18px 50px #1b23401f;overflow:hidden}
+  .bar{height:44px;background:#f1f3f6;display:flex;align-items:center;gap:8px;padding:0 16px}
+  .dot{width:11px;height:11px;border-radius:50%;background:#d5d9e0}
+  .url{margin-left:16px;flex:1;height:28px;border-radius:14px;background:#fff;color:#5b6270;font-size:14px;display:flex;align-items:center;padding:0 14px}
+  .ext{width:24px;height:24px;border-radius:6px;background:#1f5eff url(icon.svg) center/24px no-repeat}
+  .player{position:absolute;left:20px;top:64px;right:20px;bottom:20px;border-radius:10px;overflow:hidden}
+  .player svg{display:block;width:100%;height:100%}
+  .controls{position:absolute;left:0;right:0;bottom:0;height:48px;background:linear-gradient(transparent,#0008);display:flex;align-items:center;gap:14px;padding:0 16px;color:#fff;font-size:14px}
+  .track{flex:1;height:4px;border-radius:2px;background:#ffffff55;position:relative}
+  .track i{position:absolute;left:0;top:0;bottom:0;width:38%;background:#fff;border-radius:2px}
+  .toast{position:absolute;left:14px;top:14px;font-weight:600;font-size:18px;color:#fff;background:#111c;padding:9px 14px;border-radius:9px}
+  .popup{position:absolute;right:64px;top:64px;width:340px;border-radius:14px;box-shadow:0 22px 60px #1b234033;overflow:hidden;background:#fff}
+  .popup img{display:block;width:100%}
+  .keys{position:absolute;left:880px;top:330px;display:grid;gap:22px}
+  .row{display:flex;align-items:center;gap:10px;font-size:20px;color:#4b5261}
+  kbd{min-width:52px;height:52px;padding:0 12px;border-radius:12px;background:#fff;border:1px solid #d5d9e0;box-shadow:0 3px 0 #d5d9e0;display:inline-flex;align-items:center;justify-content:center;font:600 22px system-ui;color:#16181d}
+  .row span{margin-left:10px}
+  .card{position:absolute;left:880px;top:300px;width:336px;display:grid;gap:14px}
+  .card div{background:#fff;border-radius:12px;padding:18px 20px;font-size:18px;line-height:1.45;box-shadow:0 8px 24px #1b234014}
+  .card b{display:block;font-size:20px;margin-bottom:2px}
+</style></head>
+<body>
+<div class="head"><h1 id="title"></h1><p id="sub"></p></div>
+<div class="browser">
+  <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">video.example.com/watch</span><span class="ext"></span></div>
+  <div class="player">
+    <svg viewBox="0 0 720 356" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf9f"/><stop offset="1" stop-color="#ff8fa3"/></linearGradient></defs>
+      <rect width="720" height="356" fill="url(#sky)"/><circle cx="520" cy="130" r="54" fill="#fff4d6"/>
+      <path d="M0 250 L140 150 L260 240 L380 120 L520 230 L640 160 L720 210 L720 356 L0 356Z" fill="#6c5ba7"/>
+      <path d="M0 300 L120 230 L250 290 L400 210 L560 300 L720 250 L720 356 L0 356Z" fill="#3e3a7a"/>
+    </svg>
+    <div class="controls"><span>▶</span><span>12:04</span><div class="track"><i></i></div><span>31:40</span></div>
+    <div class="toast" id="toast"></div>
+  </div>
+</div>
+<div class="popup" id="popup"><img id="popimg" alt=""></div>
+<div class="keys" id="keys" hidden></div>
+<div class="card" id="card" hidden></div>
+<script src="screenshot.js"></script>
+</body></html>
